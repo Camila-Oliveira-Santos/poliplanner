@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Disciplinas | 
+{% endblock title %}
+
+{% block content %}
+<h2>Lista de Disciplinas</h2>
+
+<section>
+    {% for disciplina in disciplina_list %}
+    <hr>
+    <article>
+        <header>
+            <h4>{{ disciplina.titulo }} ({{ disciplina.codigo }}) </h4>
+        </header>
+    </article>
+    {% endfor %}
+
+    <a href="{% url 'aplicativo:add_disciplina' %}"><button>Adicionar Disciplina</button></a>
+</section>
+
+{% endblock content %}

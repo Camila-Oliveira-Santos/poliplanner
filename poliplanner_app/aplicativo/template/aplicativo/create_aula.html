@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Criar Atividade
+{% endblock title %}
+
+{% block content %}
+<h2>Oferecer Aula</h2>
+
+<form method="post">
+    {% csrf_token %}
+    {{ horario_form.as_p }}
+    <button type="submit">Postar</button>
+</form>
+
+{% endblock content %} 

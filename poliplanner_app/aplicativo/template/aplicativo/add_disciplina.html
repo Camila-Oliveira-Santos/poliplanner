@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Adicionar Disciplina
+{% endblock title %}
+
+{% block content %}
+<h2>Adicionar Disciplina</h2>
+
+<form method="post">
+    {% csrf_token %}
+    {{ disciplina_form.as_p }}
+    <button type="submit">Criar</button>
+</form>
+
+{% endblock content %} 

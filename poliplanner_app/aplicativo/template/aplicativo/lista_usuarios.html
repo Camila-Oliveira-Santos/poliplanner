@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Usuários | 
+{% endblock title %}
+
+{% block content %}
+<h2>Lista de Usuários</h2>
+
+<section>
+    {% for usuario in usuario_list %}
+    <hr>
+    <article>
+        <header>
+            <h4><a href="{% url 'aplicativo:detail_perfil' usuario.id %}">{{ usuario.nome }}</a></h4>
+        </header>
+    </article>
+    {% endfor %}
+</section>
+
+{% endblock content %}

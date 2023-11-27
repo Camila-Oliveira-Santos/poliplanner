@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Feedback</h2>
+
+<form action="{% url 'aplicativo:feedback' aula.id %}" method="post">
+    {% csrf_token %}
+    {{ feedback_form.as_p }}
+    <button type="submit">Postar Feedback</button>
+</form>
+
+<p><a href="{% url 'aplicativo:aula' aula.id %}">Voltar</a></p>
+{% endblock content %}

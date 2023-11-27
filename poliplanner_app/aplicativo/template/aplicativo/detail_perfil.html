@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>{{ usuario.nome }}</h2>
+
+<section class="dados-de-usuario">
+    <ul>
+        <li>E-mail: {{ usuario.email }} </li>
+    </ul>
+    <a href="{% url 'aplicativo:delete_perfil' usuario.id %}"><button>Excluir Usuário</button></a>
+</section>
+
+{% endblock content %}
