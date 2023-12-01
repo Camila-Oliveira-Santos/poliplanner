@@ -8,11 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-<<<<<<< HEAD
 set VIRTUAL_ENV=C:\Users\milao\Documents\poliplanner-master\.virtualenvs\djangodev
-=======
-set VIRTUAL_ENV=C:\poliplanner-master\.virtualenvs\djangodev
->>>>>>> 874b78fbb3a7f4516273a3d50bfd1c2c772ec3d2
 
 if not defined PROMPT set PROMPT=$P$G
 
