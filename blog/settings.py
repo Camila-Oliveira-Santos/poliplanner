@@ -12,6 +12,11 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
+<<<<<<< HEAD
+=======
+import dj_database_url
+
+>>>>>>> 874b78fbb3a7f4516273a3d50bfd1c2c772ec3d2
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 #BASE_DIR = Path(__file__).resolve().parent.parent
@@ -88,10 +93,17 @@ DATABASES = {
     }
 }
 
+<<<<<<< HEAD
 #if os.environ.get("DATABASE_URL"):
 #    DATABASES["default"] = dj_database_url.config(
 #        conn_max_age=600,
 #    )
+=======
+if os.environ.get("DATABASE_URL"):
+    DATABASES["default"] = dj_database_url.config(
+        conn_max_age=600,
+    )
+>>>>>>> 874b78fbb3a7f4516273a3d50bfd1c2c772ec3d2
 
 
 # Password validation
@@ -132,6 +144,10 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
+<<<<<<< HEAD
+=======
+#STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+>>>>>>> 874b78fbb3a7f4516273a3d50bfd1c2c772ec3d2
 #STATIC_ROOT=os.path.join(BASE_DIR, 'static/')
 
 #
